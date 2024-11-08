@@ -1,0 +1,155 @@
+.section1{
+  background-color: orangered;
+  height: 800px;
+  position: relative;
+}
+.section1 .top{
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+.bg-left{
+  position: absolute;
+  left: 0;
+  top: 15%;
+  width: 300px;
+  
+}
+.bg-right{
+  position: absolute;
+  right: 0;
+  top: 15%;
+  width: 300px;
+}
+.section1 ul{
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  gap: 25px;
+  font-size: 1.05rem;
+}
+.section1 li{
+  font-weight: bold;
+  color: white;
+}
+.top button{
+  padding: 15px; 
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.section1 h1{
+  width: 55%;
+  font-size: 3.5rem;
+  color: white;
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
+}
+.section1 .loc{
+  background-color: white;
+  padding: 10px;
+  display: inline;
+}
+
+
+.card-container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    place-content: center;
+    margin: auto;
+  }
+  
+  .cards-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: calc(100% - 60px);
+
+    height: 300px;
+  }
+  
+  app-restaurant-card {
+    flex: 0 0 calc(100% / 3.5); /* Ensures 3.5 cards visible */
+    transition: transform 0.3s ease;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .restaurants-head{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  .arrow{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    font-size: 1.5rem;
+  }
+  .loc, .search{
+    background-color: white;
+    padding: 20px;
+    font-weight: bold;
+    color: grey;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    place-content: center;
+  }
+  .loc{
+    width: 35%;
+  }
+  .search{
+    width: 55%;
+  }
+  .column img{
+    width: 300px;
+  }
+  .row{
+    margin: auto;
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
+  }
+.section3 img{
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.footer{
+  background-color: rgb(240, 240, 240);
+  padding: 30px;
+}
+.footer ul{
+  list-style-type: none;
+}
+.footer .lists{
+  gap: 10px;
+  width: 60%;
+  justify-content: space-around;
+}
+.footer .app{
+  width: 30%;
+  text-align: center;
+}
+.footer li{
+  margin-bottom: 15px;
+  color: rgb(103, 103, 103);
+}
+.footer b{
+  color: black;
+  font-size: 1.1rem;
+}
+.footer hr{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

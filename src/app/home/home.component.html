@@ -1,0 +1,125 @@
+<div class="home" #bg>
+    <div class="section1">
+        <img class="bg-left" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Veggies_new.png">
+        <img class="bg-right" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Sushi_replace.png">
+        <div class="top">
+            <a routerLink="/"><img src="https://res.cloudinary.com/dutdah0l9/image/upload/v1720058694/Swiggy_logo_bml6he.png" width="200px"></a>
+            <div>
+                <ul>
+                    <li><a>Swiggy Corporate</a></li>
+                    <li><a>Partner with us</a></li>
+                    <li><button (click)="scrollToSection('section3')" style=" background-color: orangered; border: 1px solid white;">Get the App<i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: -45deg; margin-left: 3px;"></i></button></li>
+                    <li *ngIf="!isLoggedIn"><button (click)="showSignIn()" style="background-color: black; border: 1px solid black;">Sign in</button></li>
+                    <li *ngIf="isLoggedIn"><button (click)="signOut()" style="background-color: black; border: 1px solid black;">Sign Out</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <h1>Order food & groceries. Discover best restaurants. Swiggy it!</h1>
+
+        <div style="display: flex; margin: auto;justify-content: space-around; margin-top: 30px; width: 50%;">
+            <div class="loc"><i class="fa-solid fa-location-dot" style="color: orangered;margin-right: 6%; font-size: 1.5rem;margin-left: 5px;"></i> Select Location<i class="fa-solid fa-angle-down" style="color: #000000;margin-left: 10%;"></i></div>
+            <a class="search">Search for restaurant, item or more <i class="fa-solid fa-magnifying-glass" style="margin-left: 20%;"></i></a>
+        </div>
+
+        <div class="row">
+            <a class="column">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/8/1/fa01e85b-3057-482d-9523-5289722b1df2_Food4BU.png">
+            </a>
+            <a class="column">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/8/1/fa01e85b-3057-482d-9523-5289722b1df2_Food4BU.png">
+            </a>
+            <a class="column">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/8/1/fa01e85b-3057-482d-9523-5289722b1df2_Food4BU.png">
+            </a>
+            <a class="column">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/8/1/fa01e85b-3057-482d-9523-5289722b1df2_Food4BU.png">
+            </a>
+        </div>
+    </div>
+
+    <div style="margin-top: 100px;">
+        <div class="restaurants-head">
+            <h2 style="font-size: 2rem;">Discover best restaurants</h2>
+            <div class="scroll-buttons">
+                <button class="arrow" (click)="scrollLeft()">←</button>
+                <button class="arrow" (click)="scrollRight()">→</button>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="cards-wrapper" #cardsWrapper>
+                <app-restaurant-card *ngFor="let restaurant of restaurants" [restaurant]="restaurant"></app-restaurant-card>
+            </div>
+        </div>
+    </div>
+
+    <div class="section3" #section3>
+        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/seo/App_download_banner.png">
+    </div>
+
+<app-signin #signin></app-signin>
+</div>
+<div class="footer" >
+    <div style="display: flex; justify-content: space-around;">
+        <div class="app">
+            <img src="https://media-assets.swiggy.com/portal/testing/seo-home/Group.svg">
+            <p style="color: rgb(103, 103, 103);">© 2024 Swiggy Limited</p>
+        </div>
+        <div class="lists" style="display: flex;">
+            <ul>
+                <li><b>Company</b></li>
+                <li>Swiggy Corporate</li>
+                <li>Careers</li>
+                <li>Team</li>
+                <li>Swiggy One</li>
+                <li>Swiggy Instamart</li>
+                <li>Swiggy Dineout</li>
+                <li>Swiggy Genie</li>
+                <li>Minis</li>
+            </ul>
+            <ul>
+                <li><b>Contact us</b></li>
+                <li>Help & Support</li>
+                <li>Partner With Us</li>
+                <li>Ride With Us</li>
+                <li><b>Legal</b></li>
+                <li>Terms & Conditions</li>
+                <li>Cookie Policy</li>
+                <li>Privacy Policy</li>
+            </ul>
+            <ul>
+                <li><b>Available in:</b></li>
+                <li>Banglore</li>
+                <li>Gurgaan</li>
+                <li>Hyderabad</li>
+                <li>Delhi</li>
+                <li>Mumbai</li>
+                <li>Pune</li>
+                <li style="border: 1px solid rgb(195, 195, 195); display: inline; padding: 4px; font-size: 0.9rem;">685 cities<i class="fa-solid fa-angle-down" style="color: #000000;margin-left: 3px;"></i> </li>
+            </ul>
+            <ul>
+                <li><b>Life at Swiggy</b></li>
+                <li>Explore With Swiggy</li>
+                <li>Swiggy News</li>
+                <li>Snackables</li>
+                <li><b>Social Links</b></li>
+                <li>
+                    <div style="width: 150px; display: flex; justify-content: space-between;">
+                        <img style="width: 20px;" src="https://media-assets.swiggy.com/portal/testing/seo-home/Linkedin.svg">
+                        <img style="width: 20px;"  src="https://media-assets.swiggy.com/portal/testing/seo-home/icon-instagram.svg">
+                        <img style="width: 10px;"  src="https://media-assets.swiggy.com/portal/testing/seo-home/icon-facebook.svg">
+                        <img style="width: 20px;"  src="https://media-assets.swiggy.com/portal/testing/seo-home/icon-pinterest.svg">
+                        <img style="width: 20px;"  src="https://media-assets.swiggy.com/portal/testing/seo-home/Twitter.svg">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div style="display: flex; justify-content: space-around;">
+        <h2 style="display: inline;">For better experience, download the Swiggy app now</h2>
+        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200,h_65/icon-AppStore_lg30tv">
+        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200,h_65/icon-GooglePlay_1_zixjxl">
+    </div>
+    
+</div>

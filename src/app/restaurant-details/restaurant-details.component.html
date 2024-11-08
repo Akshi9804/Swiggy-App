@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<p class="res_name">{{restaurant_details.name}}</p>
+<div class="res_details">
+    
+    <img class="res_image" [src]="restaurant_details.image">
+    <div class="res_des">
+        <p><i class="fa-solid fa-star" style="color: #187211;font-size: 0.8rem; margin-right: 3px;"></i>{{restaurant_details.rating}} in Google</p>
+        <p><b>{{restaurant_details.cuisine}}</b></p>
+        <p><span style="color: rgb(79, 79, 79);">Location</span> {{restaurant_details.location}}</p>
+        <hr style="color: grey;">
+        <div class="buttons">
+            <button style="margin-left: 10%"><i class="fa-solid fa-phone-volume" style="color: orangered;margin-right: 3px;"></i>Call</button>
+            <hr style="height:20px;">
+            <button style="margin-right: 10%"><i class="fa-solid fa-location-arrow" style="color: orangered;margin-right: 3px;"></i>Direction</button>
+            
+        </div>
+    </div>
+</div>
+<div *ngFor="let item of restaurant_details.menu" class="menu_container">
+<div class="menu_item">
+    <div class="item_des">
+        <p class="name">{{item.name}}</p>
+        <p style="margin-bottom: 8px;"><b>{{item.price | currency:'INR':'symbol':'1.0-0'}}</b></p>
+        <p  style="color: #187211;"><i class="fa-solid fa-star"></i><b>{{item.rating}}</b></p>
+        <p class="des">{{item.description}}</p>
+    </div>
+    <div class="button_container">
+        <button (click)="addItem(item)">ADD</button>
+    </div>
+</div>
+    <hr>
+</div>

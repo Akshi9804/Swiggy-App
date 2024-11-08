@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<div class="cart">
+    <div class="card">
+        <div *ngFor="let item of cartItems" class="items">
+            <div class="i">
+              <div class="name">
+                <p class="des">{{ item.name }}</p>
+              </div>
+              <div class="quantity">
+                <button (click)="decrease(item.item_id)" style="margin-right: 10px;">-</button>
+                <p>{{ item.quantity }}</p>
+                <button (click)="increase(item.item_id)" style="margin-left: 10px;">+</button>
+              </div>
+              <div class="price">
+                <p>{{ item.order_price | currency: 'INR':'symbol':'1.0-0' }}</p>
+              </div>
+            </div>
+          </div>
+        
+          <div *ngIf="empty" class="empty">
+            Your cart is empty
+          </div>
+      
+          <div *ngIf="!empty" >
+              <hr>
+              <div class="total">
+                <p>TO PAY </p>
+              <p>{{total | currency: 'INR':'symbol':'1.0-0' }}</p>
+              </div>
+          </div>
+          <div class="order">
+            <button > Place Order</button>
+          </div>
+          
+    </div>
+    
+  </div>
+
+

@@ -1,0 +1,14 @@
+<div class="nav">
+    <div class="navbar">
+        <div class="icon">
+            <a routerLink="/"><img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_800,h_800/portal/m/logo_192x192.png"></a>
+        </div>
+        <ul>
+            <li><a routerLink="/cart"><i class="fa-solid fa-cart-shopping" style="color: black; margin-right: 3px;"></i>Cart</a></li>
+            <li *ngIf="!isLoggedIn"><button (click)="showSignIn()" style="background-color: transparent;border: none;">Sign in</button></li>
+            <li *ngIf="isLoggedIn"><button (click)="signOut()" style="background-color: transparent;border: none;">Sign Out</button></li>
+        </ul>
+    </div>
+</div>
+
+<app-signin #signin></app-signin>
